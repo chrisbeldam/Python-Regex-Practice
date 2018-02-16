@@ -7,13 +7,13 @@ https://youtube.com
 https://www.nasa.gov
 '''
 
-pattern = re.compile(r'https?://(www\.)?(\w+)(\.\w+)')
+# pattern = re.compile(r'https?://(www\.)?(\w+)(\.\w+)')
+#
+# subbed_urls = pattern.sub(r'\2\3', urls)
+#
+# print(subbed_urls)
 
-subbed_urls = pattern.sub(r'\2\3', urls)
-
-print(subbed_urls)
-
-urlLinks = re.search(r'(?P<links>http\s?s?://\w+\.\w+\.?\w+)',urls)
+urlLinks = re.search(r'(?P<links>http\s?s?://\w+\.\w+\.?\w+)',urls) # Looks for all the combinations of yr
 print(urlLinks.groups())
 
 # matches = pattern.finditer(urls)
